@@ -69,8 +69,11 @@ async function sair() { await supabase.auth.signOut(); router.replace("/login");
 
 useEffect(() => { verificarUsuario(); }, []);
 
-const clientesFiltrados = clientes.filter((cliente) => `${cliente.nome} ${cliente.telefone}`.toLowerCase().includes(pesquisa.toLowerCase()));
-
+const clientesFiltrados = clientes.filter((cliente) =>
+  `${cliente.nome} ${cliente.telefone}`
+    .toLowerCase()
+    .includes(pesquisa.toLowerCase())
+);
 if (carregando) return <p>Carregando...</p>;
 
 return ( <main style={{ padding: "30px", maxWidth: "1000px", margin: "auto" }}> <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "30px" }}> <h1>Painel de Clientes</h1> <button onClick={sair}>Sair</button> </header>
