@@ -69,7 +69,7 @@ async function sair() { await supabase.auth.signOut(); router.replace("/login");
 
 useEffect(() => { verificarUsuario(); }, []);
 
-const clientesFiltrados = clientes.filter((cliente) => ${cliente.nome} ${cliente.telefone} .toLowerCase() .includes(pesquisa.toLowerCase()) );
+const clientesFiltrados = clientes.filter((cliente) => `${cliente.nome} ${cliente.telefone}`.toLowerCase().includes(pesquisa.toLowerCase()));
 
 if (carregando) return <p>Carregando...</p>;
 
