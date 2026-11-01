@@ -1,0 +1,14 @@
+
+{
+  "id": "/",
+  "name": "Sistema de Cadastro de Pessoas e Alunos",
+  "short_name": "Cadastro de Alunos",
+  "description": "Aplicativo para gerenciamento de cadastros de pessoas e alunos, com acesso administrativo seguro.",
+  "start_url": "/app/login",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f0f4f8",
+  "theme_color": "#2563eb",
+  "lang": "pt-BR"
+}
